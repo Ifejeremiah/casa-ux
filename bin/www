@@ -8,12 +8,13 @@ const app = require('../app');
 const debug = require('debug')('casa-ux:server');
 const http = require('http');
 const {Log} = require('../utils')
+const {Properties} = require('../config')
 
 /**
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(Properties.PORT);
 app.set('port', port);
 
 /**
