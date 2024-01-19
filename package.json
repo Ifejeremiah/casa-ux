@@ -11,6 +11,8 @@
     "dotenv": "^16.3.1",
     "express": "~4.16.1",
     "http-status-codes": "^2.3.0",
+    "mongoose": "^8.1.0",
+    "mongoose-aggregate-paginate-v2": "^1.0.7",
     "pino": "^8.17.2"
   },
   "devDependencies": {
