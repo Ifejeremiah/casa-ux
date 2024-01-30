@@ -15,7 +15,7 @@ mongoose
 mongoose.Promise = global.Promise;
 
 module.exports = {
-  Course: require('../dao').CourseDao,
+  Student: require('../dao').StudentDao,
   ObjectId: mongoose.Types.ObjectId,
   isValidId,
 };

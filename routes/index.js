@@ -2,15 +2,16 @@ const router = require('express').Router();
 const UserRoute = require('./user.route');
 const HealthRoute = require('./health.route');
 const CourseRoute = require('./course.route');
+const StudentRoute = require('./student.route');
 
 const routes = [
   {
-    path: '/v1/courses',
-    route: CourseRoute,
-  },
-  {
     path: '/v1/users',
     route: UserRoute,
+  },
+  {
+    path: '/v1/students',
+    route: StudentRoute,
   },
   {
     path: '/health',
