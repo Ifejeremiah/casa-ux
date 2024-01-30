@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const aggregatePaginate = require('mongoose-aggregate-paginate-v2');
 
-const courseApplicantsSchema = new Schema(
+const studentSchema = new Schema(
   {
     first_name: {
       type: String,
@@ -40,7 +40,7 @@ const courseApplicantsSchema = new Schema(
   { timestamps: true }
 );
 
-courseApplicantsSchema.set('toJSON', {
+studentSchema.set('toJSON', {
   virtuals: true,
   versionKey: false,
   transform: function (doc, ret) {
@@ -49,7 +49,7 @@ courseApplicantsSchema.set('toJSON', {
   },
 });
 
-courseApplicantsSchema.plugin(aggregatePaginate);
+studentSchema.plugin(aggregatePaginate);
 
 
-module.exports.Applicants = mongoose.model('course_applicants', courseApplicantsSchema);
+module.exports = mongoose.model('students', studentSchema);

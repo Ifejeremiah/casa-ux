@@ -1,1 +1,1 @@
-module.exports.CourseDao = require('./course.dao');
+module.exports.StudentDao = require('./student.dao');
