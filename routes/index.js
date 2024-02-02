@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const UserRoute = require('./user.route');
 const HealthRoute = require('./health.route');
-const CourseRoute = require('./course.route');
 const StudentRoute = require('./student.route');
 
 const routes = [
