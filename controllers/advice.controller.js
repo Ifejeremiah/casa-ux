@@ -4,9 +4,7 @@ const {
 } = require('../models');
 const { Log } = require('../utils');
 
-module.exports = { errorHandler, notFoundHandler };
-
-function errorHandler(err, req, res, next) {
+module.exports.errorHandler = function (err, req, res, next) {
   switch (true) {
     case typeof err === 'string':
       const is404 = err.toLowerCase().endsWith('not found');
@@ -26,8 +24,8 @@ function errorHandler(err, req, res, next) {
       Log.error(err);
       return errorResponse(res, err.message, StatusCodes.INTERNAL_SERVER_ERROR);
   }
-}
+};
 
-function notFoundHandler(req, res, next) {
+module.exports.notFoundHandler = function (req, res, next) {
   return errorResponse(res, 'Could not find that resource', StatusCodes.NOT_FOUND);
-}
+};
