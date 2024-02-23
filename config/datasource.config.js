@@ -16,6 +16,7 @@ mongoose.Promise = global.Promise;
 
 module.exports = {
   Student: require('../dao').StudentDao,
+  WaitList: require('../dao').WaitListDao,
   ObjectId: mongoose.Types.ObjectId,
   isValidId,
 };
